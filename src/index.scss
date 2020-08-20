@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+$primary-color: #efb6b2;
+$secondary-color: #4e4e4e;
+$error-color: #ff4a4a;
+
+body {
+  margin: 0;
+  font-family: "Noto Serif";
+  color: $secondary-color;
+}
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.title {
+  padding: 0 1rem;
+
+  h1 {
+    color: $primary-color;
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    margin-top: 3rem;
+  }
+
+  h2, p {
+    text-align: center;
+  }
+}
+
+.error {
+  color: $error-color;
+}
+
+//form
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border: 3px solid $primary-color;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 1rem;
+    color: $primary-color;
+    transition: color 500ms;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+    }
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.output {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 15px;
+  margin-top: 1rem;
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+//image grid
+
+.img-grid {
+  margin: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  .img-wrap {
+    overflow: hidden;
+    height: 0;
+    padding: 50% 0;
+    position: relative;
+    opacity: 0.8;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: 150%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+//modal
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 60%;
+    max-height: 80%;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  }
+}
