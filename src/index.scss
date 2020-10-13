@@ -101,6 +101,10 @@ code {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  
+  @media (max-width: 600px){
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .img-wrap {
     overflow: hidden;
@@ -137,5 +141,10 @@ code {
     max-width: 60%;
     max-height: 80%;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 600px){
+      max-width: 80%;
+      max-height: 100%;
+    }
   }
 }

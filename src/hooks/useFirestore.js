@@ -10,10 +10,12 @@ const useFirestore = collection => {
             .onSnapshot(snapshot => {
                 let documents = []
                 snapshot.forEach(doc => {
+               //     console.log(doc)
                     documents.push({...doc.data(), id: doc.id})
                 })
                 setDocs(documents)
             })
+
 
         return () => unsub()
     }, [collection])
